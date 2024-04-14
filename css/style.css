@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+/*-----HEADER -----*/
+.menu-color{
+    background-color: rgb(251, 236, 219);
+}
+
+nav img{
+    height: 60px;
+    width: auto;
+}
+
+
+
+/*MAIN */
+main h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+.first{
+    
+    background-image: url(../img/gatoraton.jpg);
+    background-size:cover ;
+    background-attachment: fixed;
+    height: 85vh;
+    /*padding: 50px ;
+    margin-top: 10px;
+    margin-bottom: 30px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:rgb(255, 255, 255);
+}
+.first div{
+    
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    margin-top: 70px;
+}
+/*.first p{
+    color: rgb(255, 255, 255);
+    background-color: #a5560071;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;    
+}*/
+.first h1{
+    
+    font-size: 50px;   
+}
+.first h2{
+    
+    font-size: 30px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: -60px;
+    margin-bottom: 60px;
+    padding: 30px;
+    text-align: center;
+    box-shadow:  2px 2px 3px 1px rgba(20, 20, 20, 0.2);
+    width: 70%;
+    border-radius: 6px;
+}
+.second h2{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.second p span{
+    font-style: oblique;
+    color: rgb(211, 88, 0);
+    font-weight: 600;
+}
+.galeria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.galeria h2{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.galeria-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.galeria-card div{
+    border: 1px solid black;
+    /*box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);*/
+    width: 280px;
+    height: 450px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+
+}
+    
+
+.galeria-card img{
+    width: 250px;
+    height: 300px;
+    border-radius: 6px;
+    margin-top: 5px;
+    box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
+}
+.galeria-card h3{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.galeria-card p {
+    font-size: 15px;
+}
+
+
+/*---------Botones--------*/
+.boton{
+    text-decoration: none;
+    list-style: none;
+    background-color: #81940C;
+    border-radius: 6px;
+    color: #ffffff;
+    
+    padding: 10px 20px 10px 20px;
+    font-size: 14px;
+}
+.boton:hover{
+    color: rgb(255, 255, 255);
+    background-color: #2e3403;
+}
+/*boton principal*/
+.negro{
+    background-color: black;
+}
+.negro:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+.boton-galeria{
+    text-align: center;
+    width: auto;
+}
+
+
+
+/* Secci[on ilustraci[on cient[ifica*/
+
+.titulo-dibujo{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+}
+.dibujo-card{
+    background-color: #82940c53;
+    padding: 20px 0px 100px 0px;
+}
+.ilustracion{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 2px solid #82940c96;
+    border-radius: 6px;
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 15px;
+}
+.ilustracion div{
+
+    width: 50%;
+}
+.ilustracion img{
+    height: 200px;
+    margin: 30px;
+    border-radius: 6px;
+}
+.ilustracion div p{
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.clases{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: #f1f1f1;
+    border: 2px solid #82940c96;
+    border-radius: 6px;
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 15px;
+}
+.clases div{
+    text-align: right; 
+    width: 50%;   
+}
+.clases img{
+    height: 200px;
+    margin: 30px;
+    border-radius: 6%;
+}
+.clases div p{
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+/*---------Botones--------*/
+.boton{
+    text-decoration: none;
+    list-style: none;
+    background-color: #81940C;
+    border-radius: 6px;
+    color: #ffffff;
+    
+    padding: 10px 20px 10px 20px;
+    font-size: 14px;
+}
+.boton:hover{
+    color: rgb(255, 255, 255);
+    background-color: #2e3403;
+}
+/*boton principal*/
+.negro{
+    background-color: black;
+}
+.negro:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+.boton-galeria{
+    text-align: center;
+    width: auto;
+}
+
+
+/**-----------------PAGINAS-----------**/
+/***************ACERCA DE MI************/
+.container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.aspectos img{
+    margin-bottom: 15px;
+}
+.pasiones{
+    margin: 65px;
+    
+}
+/*.presentacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+.presentacion p span{
+    font-style: oblique;
+    color: rgb(211, 88, 0);
+    font-weight: 600;
+}
+.presentacion img{
+    width: 500px;
+    border-radius: 6px;
+    margin-right: 30px;
+}
+.aspectos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+}
+.pasiones{
+    
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+}
+*/
+
+/****************CONTACTO**************/
+
+.logo-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    
+}
+.logo-contacto h3{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.logo-contacto img{
+    width: 50px;
+    height: auto;
+}
+.logo-contacto div a{
+    margin: 10px;
+}
+.boton-mail img:hover{
+    background-color: rgb(186, 3, 3);
+    padding: 5px;
+    border-radius: 6px;
+}
+.boton-whats img:hover{
+    background-color: rgb(0, 225, 15);
+    padding: 6px;
+    border-radius: 6px;
+}
+.boton-ig img:hover{
+    background-color: rgb(255, 0, 153);
+    padding: 6px;
+    border-radius: 6px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+.formulario h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.formulario-caja{
+    margin: 10px;
+}
+.escribi-comentario{
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+}
+.mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.mapa h3{
+    font-size: 20px;
+}
+
+/***************** DIBUJO  *****************/
+
+.texto-carrusel{
+    color: #ffffff ;
+    font-weight: 600;
+}
+.imagen-carrusel{
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+    -moz-filter: brightness(70%);
+}
+
+
+
+/*FOOTER*/
+footer{
+    background-color: #2e3403;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    justify-content: center;
+    padding: 50px;
+    }
+footer h2{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
+}
+.footer-logo img{
+    width: 200px;
+    height: auto;
+    
+}
+.footer-nav{
+    text-align: center;
+    justify-content: center;
+}
+.footer-nav ul{
+    list-style: none;
+    justify-content: center
+}
+.footer-nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+.footer-redes{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.footer-redes h3{
+    font-size: 20px;
+}
+/*.footer-redes img{
+    width: 40px;
+    height: auto;
+    align-items: center;
+}*/
+
+.footer-redes i {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin: 10px;
+}
+.footer-redes i:hover{
+    color: #81940C;
+}
+
+/*!----MEDIA QUERY------*/
+@media screen and (max-width:1200px){
+    .first h1{
+        font-size: 40px;   
+    }
+    .first h2{
+        font-size: 25px;
+        margin-top: -15px;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width:812px){
+    .first h1{
+        font-size: 35px;   
+    }
+    .first h2{
+        
+        font-size: 20px;
+        margin-top: -7px;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width:712px){
+    .first h1{
+        font-size: 45px;   
+        line-height: 35px;
+        
+    }
+    .first h2{
+        
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .titulo-dibujo{
+        text-align: center;
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .ilustracion div{
+        width: 60%;
+    }
+    .ilustracion img{
+        margin: 20px;
+    }
+    .ilustracion div h3{
+        font-size: 20px;
+    }
+    .ilustracion div p{
+        font-size: 15px;
+    }
+    .clases div{
+        text-align: right; 
+        width: 60%;   
+    }
+    .clases img{
+        margin: 20px;
+    }
+    .clases div h3{
+        font-size: 20px;
+    }
+    .clases div p{
+        font-size: 15px;
+    }
+}
+
+
+
+
+@media screen and (max-width:621px){
+    /*.first h1{
+        font-size: 45px;   
+        line-height: 35px;
+        
+    }
+    .first h2{
+        
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }*/
+    .titulo-dibujo{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        
+    }
+
+    .ilustracion{
+        flex-direction: column;
+        justify-content: center;
+        height: 500px;
+        width: 80%;
+        border: 1px solid rgb(177, 177, 177);
+        margin: auto;
+        margin-bottom: 20%;
+        margin-top: 20px;
+        padding: 15px;
+    }
+   
+    .ilustracion div{
+        width: 80%;
+    }
+    .ilustracion img{
+        margin: 10px;
+        height: 200px;
+    }
+    .ilustracion div h3{
+        font-size: 18px;
+    }
+    .ilustracion div p{
+        font-size: 15px;
+    }
+    .clases div{
+        text-align: right; 
+        width: 60%;   
+    }
+    .clases img{
+        margin: 20px;
+    }
+    .clases div h3{
+        font-size: 20px;
+    }
+    .clases div p{
+        font-size: 15px;
+    }
+    
+
+}
