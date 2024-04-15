@@ -108,6 +108,7 @@ main h1{
     margin: 15px;
     padding: 15px;
 }
+
 .galeria-card img{
     width: 250px;
     height: 300px;
@@ -303,7 +304,7 @@ footer h2{
     -webkit-filter: brightness(70%);
     -moz-filter: brightness(70%);
 }
-.dibujo-first{
+.dibujo-intro{
     text-align: center;
     width: 80%;
     margin: auto;
@@ -313,34 +314,42 @@ footer h2{
     margin-top: 15px;
 }
 .ilustracion-tecnologia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #81940C;
-    width: 80%;
-    margin: auto;
-    padding: 25px;
-    border-radius: 6px;
     color: #ffffff;
+    margin-top: 60px;
+    padding: 60px 30px 100px 30px;
     text-align: center;
-    margin-bottom: 70px;
 }
 .ilustracion-tecnologia p{
     margin-top: 20px;
 }
 
 /****************PINTURA**************/
+.pintura-intro{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
 .pintura-color{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #81940C;
     color: #ffffff;
-    margin: auto;
-    margin-bottom: 60px;
-    padding: 30px;
+    margin-top: 60px;
+    padding: 60px 30px 100px 30px;
     text-align: center;
-    box-shadow:  2px 2px 3px 1px rgba(20, 20, 20, 0.2);
-    width: 70%;
-    border-radius: 6px;
 }
-
+.pintura-color img{
+    width: 100%;
+}
 /****************CONTACTO**************/
 .logo-contacto{
     display: flex;
@@ -392,7 +401,12 @@ footer h2{
 }
 .formulario-caja{
     margin: 10px;
+    justify-content: center;
 }
+.formulario-caja div{
+    margin-bottom: 15px;
+}
+
 .escribi-comentario{
     width: 300px;
     margin: auto;
@@ -426,7 +440,11 @@ footer h2{
         margin:0;
     }
 }
-
+@media screen and (max-width:880px){
+    .formulario-mapa{
+        flex-direction: column;
+    }
+}
 @media screen and (max-width:812px){
     .first{
         height: 75vh;
@@ -596,7 +614,6 @@ footer h2{
     }   
     .first h1{
         display: none;
-        
     }
     .first h2{
         display: none;
@@ -606,5 +623,16 @@ footer h2{
     }
     .slide{
         display: none;
+    }
+    .clases{
+        height: 550px;
+    }
+}
+@media screen and (max-width:500px){
+    .ilustracion img{
+        width: 80%;
+    }
+    .clases img{
+        width: 80%;
     }
 }
