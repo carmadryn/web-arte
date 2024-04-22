@@ -1,0 +1,223 @@
+@media screen and (max-width:1200px){
+    .first{
+        height: 83vh;
+        div{
+            margin:0;
+            h1{
+            font-size: 40px;   
+            }
+            h2{
+                font-size: 25px;
+                margin-top: 0px;
+                margin-bottom: 15px;
+            
+            }
+        }
+    }
+}    
+
+@media screen and (max-width:880px){
+    .formulario-mapa{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:812px){
+    .first{
+        height: 75vh;
+        h1{
+            font-size: 35px;   
+        }
+        h2{ 
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (max-width:712px){
+    .first{
+        height: 60vh;
+        background-position: 40% center;
+        h1{
+            font-size: 45px;   
+            line-height: 35px;
+            text-align: center; 
+        }
+        h2{
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+    }   
+    .second{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 20px;
+        h2{
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+    }
+    .dibujo-card{
+        text-align: center;
+        margin-top: 30px;
+        font-size: 25px;
+        .ilustracion {
+            img{
+                margin: 5px;
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+            div{
+                width: 60%;
+                text-align: left;
+                h3{
+                    font-size: 20px
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+        .clases{
+            div{
+                text-align: right; 
+                width: 60%;   
+            }
+        }     
+    }   
+}  
+
+@media screen and (max-width:621px){
+    .first{
+        height: 60vh;
+        background-position: 30% center;
+        h1{
+            font-size: 40px;   
+            line-height: 35px;
+            text-align: center; 
+        }
+        h2{
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+    }  
+    .dibujo-card{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        .ilustracion {
+            flex-direction: column;
+            justify-content: center;
+            height: 500px;
+            width: 80%;
+            border: 1px solid rgb(177, 177, 177);
+            margin: auto;
+            margin-bottom: 5%;
+            margin-top: 20px;
+            padding: 15px;
+            img{
+                margin: 10px;
+                height: 200px;
+            }
+            div{
+                width: 80%;
+                text-align: center;
+                h3{
+                    font-size: 18px
+                }
+                p{
+                    font-size: 15px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .clases{
+            flex-direction: column;
+            justify-content: center;
+            height: 500px;
+            width: 80%;
+            border: 1px solid rgb(177, 177, 177);
+            margin: auto;
+            margin-bottom: 20%;
+            margin-top: 20px;
+            padding: 15px;
+            img{
+                margin: 10px;
+                height: 200px;
+            }
+            div{
+                text-align: center; 
+                width: 80%;
+                h3{
+                    font-size: 18px;
+                }   
+                p{
+                    font-size: 15px;
+                    margin-bottom: 30px;
+                }
+            }
+        }     
+    }   
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px 150px 120px;
+        grid-template-areas:
+        "footer-logo"
+        "footer-nav"
+        "footer-redes"
+        ;
+    }
+}  
+
+@media screen and (max-width:500px){
+    .first{
+        background-repeat: no-repeat;
+        background-position: 15% center;
+        height: 55vh;
+        background-attachment: scroll;
+        h1{
+            display: none; 
+        }
+        h2{
+            display: none;
+        } 
+        .negro{
+            display:none
+        }
+    }   
+
+    }
+    /*.slide{
+        display: none;*/
+    
+    .dibujo-clases{
+        .clases{
+            height: 550px;
+        }
+}
+
+@media screen and (max-width:500px){
+    .dibujo-card{
+        .ilustracion{
+            img{
+                width: 80%;
+            }
+        }    
+        .clases{
+            height: 550px;
+            img{
+                width: 80%;
+            }
+            div{
+                .boton-dibujo{
+                    margin-bottom: 10px;
+                    
+                }
+            }
+        }
+    }
+}

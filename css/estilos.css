@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+  box-sizing: border-box; }
+
+/*---------Botones--------*/
+.boton {
+  text-decoration: none;
+  list-style: none;
+  background-color: #82940c;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  font-size: 14px; }
+  .boton:hover {
+    color: white;
+    background-color: #2e3403; }
+
+/*boton first*/
+.negro {
+  background-color: black; }
+  .negro:hover {
+    color: #000000;
+    background-color: #ffffff; }
+
+.boton-galeria {
+  text-align: center;
+  width: auto; }
+
+header .menu-color {
+  background-color: #ffe8bf; }
+  header .menu-color div a img {
+    height: 40px;
+    width: auto; }
+
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../img/gatoraton.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 85vh;
+  color: white; }
+  .first div {
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    margin-top: 35px; }
+    .first div h1 {
+      font-size: 50px;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0; }
+    .first div h2 {
+      font-size: 30px;
+      margin-top: -5px;
+      margin-bottom: 15px; }
+
+.second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  margin: auto;
+  margin-top: -60px;
+  margin-bottom: 60px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 2px 2px 3px 1px rgba(20, 20, 20, 0.2);
+  width: 70%;
+  border-radius: 6px; }
+  .second h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 25px; }
+  .second p span {
+    font-style: oblique;
+    color: #d35800;
+    font-weight: 600; }
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px; }
+  .galeria h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 25px; }
+  .galeria .galeria-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px; }
+    .galeria .galeria-card div {
+      border: 1px solid black;
+      width: 280px;
+      height: 450px;
+      border-radius: 6px;
+      text-align: center;
+      margin: 15px;
+      padding: 15px; }
+      .galeria .galeria-card div img {
+        width: 250px;
+        height: 300px;
+        border-radius: 6px;
+        margin-top: 5px;
+        box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4); }
+      .galeria .galeria-card div h3 {
+        font-size: 18px;
+        margin-top: 10px; }
+      .galeria .galeria-card div p {
+        font-size: 15px; }
+
+.dibujo-card {
+  background-color: #82940c53;
+  padding: 20px 0px 100px 0px; }
+  .dibujo-card h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px; }
+  .dibujo-card .ilustracion {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 2px solid #82940c96;
+    border-radius: 6px;
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 15px; }
+  .dibujo-card img {
+    height: 200px;
+    margin: 30px;
+    border-radius: 6px; }
+  .dibujo-card div {
+    width: 50%; }
+    .dibujo-card div p {
+      font-size: 17px;
+      margin-bottom: 15px; }
+  .dibujo-card .clases {
+    flex-direction: row-reverse; }
+  .dibujo-card div {
+    text-align: right; }
+
+.pintura-intro {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px; }
+
+.pintura-color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #81940C;
+  color: #ffffff;
+  margin-top: 60px;
+  padding: 60px 30px 100px 30px;
+  text-align: center; }
+  .pintura-color div img {
+    width: 100%; }
+
+.carrousel-dibujo div .carrusel-inner .carousel-item .imagen-carrusel {
+  filter: brightness(70%);
+  -webkit-filter: brightness(70%);
+  -moz-filter: brightness(70%); }
+
+.carrousel-dibujo div .carrusel-inner .carousel-item .texto-carrusel {
+  color: #ffffff;
+  font-weight: 600; }
+
+.dibujo-intro {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px; }
+
+.galeria div .galeria-dibujo p {
+  margin-top: 15px; }
+
+.ilustracion-tecnologia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #81940C;
+  color: #ffffff;
+  margin-top: 60px;
+  padding: 60px 30px 100px 30px;
+  text-align: center; }
+
+.ilustracion-tecnologia p {
+  margin-top: 20px; }
+
+.logo-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px; }
+  .logo-contacto h3 {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px; }
+  .logo-contacto div img {
+    width: 50px;
+    height: auto;
+    margin: 10px; }
+  .logo-contacto div .boton-mail img:hover {
+    background-color: #DB4437;
+    padding: 5px;
+    border-radius: 6px; }
+  .logo-contacto div .boton-whats img:hover {
+    background-color: #25D366;
+    padding: 6px;
+    border-radius: 6px; }
+  .logo-contacto div .boton-ig img:hover {
+    background-color: RGB(193, 53, 132);
+    padding: 6px;
+    border-radius: 6px; }
+
+.formulario-mapa {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px; }
+  .formulario-mapa .formulario {
+    display: flex;
+    flex-direction: column; }
+    .formulario-mapa .formulario h3 {
+      font-size: 20px;
+      margin-bottom: 15px; }
+    .formulario-mapa .formulario .formulario-caja {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      /*border: 1px solid rgb(172, 172, 172);*/
+      background-color: #82940c5a;
+      padding: 20px;
+      border-radius: 6px; }
+      .formulario-mapa .formulario .formulario-caja div {
+        margin-bottom: 15px; }
+        .formulario-mapa .formulario .formulario-caja div input[type="text"], .formulario-mapa .formulario .formulario-caja div input[type="email"] {
+          width: calc(100% - 10px);
+          /* Toma el ancho completo menos el margen derecho */
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px; }
+        .formulario-mapa .formulario .formulario-caja div .comentario {
+          height: 100px; }
+        .formulario-mapa .formulario .formulario-caja div .boton {
+          border: none; }
+  .formulario-mapa .mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px; }
+    .formulario-mapa .mapa h3 {
+      font-size: 20px;
+      margin-bottom: 15px; }
+    .formulario-mapa .mapa iframe {
+      border-radius: 6px; }
+
+footer {
+  background-color: #2e3403;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150px;
+  grid-template-areas: "footer-logo footer-nav footer-redes";
+  place-items: center;
+  padding: 50px; }
+  footer .footer-logo img {
+    width: 200px;
+    height: auto; }
+  footer .footer-logo h2 {
+    color: white;
+    font-size: 18px;
+    text-align: center; }
+  footer .footer-nav {
+    text-align: center; }
+    footer .footer-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-self: center;
+      justify-self: center; }
+      footer .footer-nav ul li a {
+        text-decoration: none;
+        color: #ffffff; }
+  footer .footer-redes {
+    color: white;
+    text-align: center; }
+    footer .footer-redes h3 {
+      font-size: 20px; }
+    footer .footer-redes div a i {
+      color: white;
+      font-size: 30px;
+      margin: 10px; }
+      footer .footer-redes div a i:hover {
+        color: #82940c; }
+
+@media screen and (max-width: 1200px) {
+  .first {
+    height: 83vh; }
+    .first div {
+      margin: 0; }
+      .first div h1 {
+        font-size: 40px; }
+      .first div h2 {
+        font-size: 25px;
+        margin-top: 0px;
+        margin-bottom: 15px; } }
+
+@media screen and (max-width: 880px) {
+  .formulario-mapa {
+    flex-direction: column; } }
+
+@media screen and (max-width: 812px) {
+  .first {
+    height: 75vh; }
+    .first h1 {
+      font-size: 35px; }
+    .first h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 25px; } }
+
+@media screen and (max-width: 712px) {
+  .first {
+    height: 60vh;
+    background-position: 40% center; }
+    .first h1 {
+      font-size: 45px;
+      line-height: 35px;
+      text-align: center; }
+    .first h2 {
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 20px; }
+  .second {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px; }
+    .second h2 {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-size: 20px; }
+  .dibujo-card {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px; }
+    .dibujo-card .ilustracion img {
+      margin: 5px;
+      margin-right: 20px;
+      margin-left: 20px; }
+    .dibujo-card .ilustracion div {
+      width: 60%;
+      text-align: left; }
+      .dibujo-card .ilustracion div h3 {
+        font-size: 20px; }
+      .dibujo-card .ilustracion div p {
+        font-size: 15px; }
+    .dibujo-card .clases div {
+      text-align: right;
+      width: 60%; } }
+
+@media screen and (max-width: 621px) {
+  .first {
+    height: 60vh;
+    background-position: 30% center; }
+    .first h1 {
+      font-size: 40px;
+      line-height: 35px;
+      text-align: center; }
+    .first h2 {
+      font-size: 18px;
+      margin-top: 15px;
+      margin-bottom: 20px; }
+  .dibujo-card {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px; }
+    .dibujo-card .ilustracion {
+      flex-direction: column;
+      justify-content: center;
+      height: 500px;
+      width: 80%;
+      border: 1px solid #b1b1b1;
+      margin: auto;
+      margin-bottom: 5%;
+      margin-top: 20px;
+      padding: 15px; }
+      .dibujo-card .ilustracion img {
+        margin: 10px;
+        height: 200px; }
+      .dibujo-card .ilustracion div {
+        width: 80%;
+        text-align: center; }
+        .dibujo-card .ilustracion div h3 {
+          font-size: 18px; }
+        .dibujo-card .ilustracion div p {
+          font-size: 15px;
+          margin-bottom: 30px; }
+    .dibujo-card .clases {
+      flex-direction: column;
+      justify-content: center;
+      height: 500px;
+      width: 80%;
+      border: 1px solid #b1b1b1;
+      margin: auto;
+      margin-bottom: 20%;
+      margin-top: 20px;
+      padding: 15px; }
+      .dibujo-card .clases img {
+        margin: 10px;
+        height: 200px; }
+      .dibujo-card .clases div {
+        text-align: center;
+        width: 80%; }
+        .dibujo-card .clases div h3 {
+          font-size: 18px; }
+        .dibujo-card .clases div p {
+          font-size: 15px;
+          margin-bottom: 30px; }
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 150px 120px;
+    grid-template-areas: "footer-logo" "footer-nav" "footer-redes"; } }
+
+@media screen and (max-width: 500px) {
+  .first {
+    background-repeat: no-repeat;
+    background-position: 15% center;
+    height: 55vh;
+    background-attachment: scroll; }
+    .first h1 {
+      display: none; }
+    .first h2 {
+      display: none; }
+    .first .negro {
+      display: none; } }
+
+/*.slide{
+        display: none;*/
+.dibujo-clases .clases {
+  height: 550px; }
+
+@media screen and (max-width: 500px) {
+  .dibujo-card .ilustracion img {
+    width: 80%; }
+  .dibujo-card .clases {
+    height: 550px; }
+    .dibujo-card .clases img {
+      width: 80%; }
+    .dibujo-card .clases div .boton-dibujo {
+      margin-bottom: 10px; } }

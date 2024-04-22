@@ -1,0 +1,309 @@
+.first{
+    @include flexbox (flex, center, center, column);
+    background-image: url(../img/gatoraton.jpg);
+    background-size:cover ;
+    background-attachment: fixed;
+    height: 85vh;
+    color:rgb(255, 255, 255);
+    div{
+        align-items: center;
+        text-align: center;
+        width: 40%;
+        margin-top: 35px;
+        h1{
+            font-size: 50px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+
+        }
+        h2{
+            font-size: 30px;
+            margin-top: -5px;
+            margin-bottom: 15px;
+        }
+    }
+}
+.second{
+    @include flexbox (flex, center, center, column);
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: -60px;
+    margin-bottom: 60px;
+    padding: 30px;
+    text-align: center;
+    box-shadow:  2px 2px 3px 1px rgba(20, 20, 20, 0.2);
+    width: 70%;
+    border-radius: 6px;
+    h2{
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+    p{
+        span{
+            font-style: oblique;
+            color: $color-acento;
+            font-weight: 600;
+        }
+    }
+}
+.galeria{
+    @include flexbox (flex, center, center, column);
+    margin-bottom: 100px;
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    .galeria-card{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        div{
+            border: 1px solid black;
+            width: 280px;
+            height: 450px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 15px;
+            padding: 15px;
+            img{
+                width: 250px;
+                height: 300px;
+                border-radius: 6px;
+                margin-top: 5px;
+                box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+                -webkit-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
+                -moz-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
+            }
+            h3{
+                font-size: 18px;
+                margin-top: 10px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+        
+    }
+}
+.dibujo-card{
+    background-color: #82940c53;
+    padding: 20px 0px 100px 0px;
+    h2{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    .ilustracion{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #f1f1f1;
+        border: 2px solid #82940c96;
+        border-radius: 6px;
+        height: 300px;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        padding: 15px;
+        }
+        img{
+            height: 200px;
+            margin: 30px;
+            border-radius: 6px;
+        }
+        div{
+            width: 50%;
+            p{
+                font-size: 17px;
+                margin-bottom: 15px;
+            }
+        }
+    .clases{
+        flex-direction: row-reverse;
+        }
+        div{
+            text-align: right;
+            }
+}
+
+//////////////*PAGINAS*//////////
+/// ACERCA DE MI
+/// PINTURA
+.pintura-intro{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.pintura-color{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #81940C;
+    color: #ffffff;
+    margin-top: 60px;
+    padding: 60px 30px 100px 30px;
+    text-align: center;
+    div{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+/// DIBUJO
+.carrousel-dibujo{
+    div{
+        .carrusel-inner{
+            .carousel-item{
+                .imagen-carrusel{
+                    filter: brightness(70%);
+                    -webkit-filter: brightness(70%);
+                    -moz-filter: brightness(70%);
+                }
+                .texto-carrusel{
+                    color: #ffffff ;
+                    font-weight: 600;
+                }
+
+            }
+        }
+    }
+}
+.dibujo-intro{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+.galeria{
+    div{
+        .galeria-dibujo{
+            p{
+                margin-top: 15px;
+            }
+        }   
+    }
+}   
+.ilustracion-tecnologia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #81940C;
+    color: #ffffff;
+    margin-top: 60px;
+    padding: 60px 30px 100px 30px;
+    text-align: center;
+}
+.ilustracion-tecnologia p{
+margin-top: 20px;
+}
+
+/// CONTACTO
+.logo-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+        h3{
+            font-size: 20px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        div{
+            img{
+                width: 50px;
+                height: auto;
+                margin: 10px;
+                }
+            .boton-mail{
+                img{
+                    &:hover{
+                        background-color: #DB4437;
+                        padding: 5px;
+                        border-radius: 6px;
+                    }
+                }
+            }       
+            .boton-whats{
+                img{
+                    &:hover{
+                        background-color: #25D366;
+                        padding: 6px;
+                        border-radius: 6px;
+                    }
+                }
+            }
+            .boton-ig{
+                img{
+                    &:hover{
+                        background-color: RGB(193, 53, 132);
+                        padding: 6px;
+                        border-radius: 6px;
+                    }
+                }
+            }    
+        }
+    }
+.formulario-mapa{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    margin-bottom: 60px;
+    .formulario{
+        display: flex;
+        flex-direction: column ;
+        h3{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .formulario-caja{
+            display: flex;
+            flex-direction: column;
+            margin-bottom:10px;
+            /*border: 1px solid rgb(172, 172, 172);*/
+            background-color: #82940c5a;
+            padding: 20px;
+            border-radius: 6px;
+            div{
+                margin-bottom: 15px;
+                input[type="text"],input[type="email"]{
+                    width: calc(100% - 10px); /* Toma el ancho completo menos el margen derecho */
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+                .comentario{
+                    height: 100px;
+                }
+                .boton{
+                    border:none;
+                }   
+            }
+        }
+    }
+    .mapa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+        h3{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        iframe{
+            border-radius: 6px;
+        }
+    }
+}

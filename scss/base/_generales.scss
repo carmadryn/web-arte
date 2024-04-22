@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+//!variables
+$color-primario:#82940c;
+$color-secundario:#2e3403;
+$color-acento:rgb(211, 88, 0);
+
+/*---------Botones--------*/
+
+.boton{
+    text-decoration: none;
+    list-style: none;
+    background-color: $color-primario;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 10px 20px 10px 20px;
+    font-size: 14px;
+    &:hover{
+        color: white;
+        background-color: $color-secundario;
+    }
+}
+/*boton first*/
+.negro{
+    background-color:black;
+    &:hover{
+        color:#000000;
+        background-color: #ffffff;
+    }
+}
+
+.boton-galeria{
+    text-align: center;
+    width: auto;
+}
+
+////*MIXIN*////
+@mixin flexbox($flex, $justify, $aling, $direction){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $aling;
+    flex-direction: $direction;
+}
+

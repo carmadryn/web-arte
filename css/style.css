@@ -29,9 +29,7 @@ main h1{
     background-size:cover ;
     background-attachment: fixed;
     height: 85vh;
-    /*padding: 50px ;
-    margin-top: 10px;
-    margin-bottom: 30px;*/
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -389,29 +387,50 @@ footer h2{
     display: flex;
     justify-content: center;
     gap:20px;
+    margin-bottom: 60px;
 }
 .formulario{
     display: flex;
     flex-direction: column ;
-    align-items: center;
+
 }
 .formulario h3{
     font-size: 20px;
     margin-bottom: 15px;
 }
 .formulario-caja{
-    margin: 10px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    border: 1px solid rgb(172, 172, 172);
+    padding: 20px;
+    border-radius: 6px;
 }
+
 .formulario-caja div{
     margin-bottom: 15px;
 }
 
-.escribi-comentario{
-    width: 300px;
-    margin: auto;
-    padding: 20px;
+.formulario-caja input[type="text"],
+.formulario-caja input[type="email"]{
+    width: calc(100% - 10px); /* Toma el ancho completo menos el margen derecho */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
+.comentario{
+    height: 100px;
+}
+
+
+.formulario-caja input[type="submit"]{
+    border: none;
+ 
+    
+    
+}
+
 .mapa {
     display: flex;
     flex-direction: column;

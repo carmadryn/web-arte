@@ -1,0 +1,18 @@
+{
+  "name": "web-arte",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hi 👋, I'm Carla</h1>\r <h3 align=\"left\">Connect with me:</h3>\r <p align=\"left\">\r <a href=\"https://linkedin.com/in/maria storniolo\" target=\"blank\"><img align=\"center\" src=\"https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg\" alt=\"maria storniolo\" height=\"30\" width=\"40\" /></a>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.0"
+  }
+}
