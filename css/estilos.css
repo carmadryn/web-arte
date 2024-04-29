@@ -12,15 +12,18 @@
   background-color: #82940c;
   border-radius: 6px;
   color: #ffffff;
+  font-weight: 600;
   padding: 10px 20px 10px 20px;
-  font-size: 14px; }
+  font-size: 14px;
+  transition: all 700ms ease-out; }
   .boton:hover {
     color: white;
     background-color: #2e3403; }
 
 /*boton first*/
 .negro {
-  background-color: black; }
+  background-color: black;
+  transition: all 700ms ease-out; }
   .negro:hover {
     color: #000000;
     background-color: #ffffff; }
@@ -28,6 +31,11 @@
 .boton-galeria {
   text-align: center;
   width: auto; }
+
+.boton-galeria-miarte {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 header .menu-color {
   background-color: #ffe8bf; }
@@ -53,7 +61,7 @@ header .menu-color {
     .first div h1 {
       font-size: 50px;
       font-weight: 600;
-      color: #ffffff;
+      color: white;
       margin: 0; }
     .first div h2 {
       font-size: 30px;
@@ -80,52 +88,68 @@ header .menu-color {
     font-size: 25px; }
   .second p span {
     font-style: oblique;
-    color: #d35800;
+    color: #ff7310;
     font-weight: 600; }
 
-.galeria {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 100px; }
-  .galeria h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    text-transform: uppercase;
-    font-size: 25px; }
-  .galeria .galeria-card {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px; }
-    .galeria .galeria-card div {
-      border: 1px solid black;
-      width: 280px;
-      height: 450px;
-      border-radius: 6px;
-      text-align: center;
-      margin: 15px;
-      padding: 15px; }
-      .galeria .galeria-card div img {
-        width: 250px;
-        height: 300px;
-        border-radius: 6px;
-        margin-top: 5px;
-        box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
-        -webkit-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4); }
-      .galeria .galeria-card div h3 {
-        font-size: 18px;
-        margin-top: 10px; }
-      .galeria .galeria-card div p {
-        font-size: 15px; }
+.pintura-intro {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 40px; }
+
+.galeria-miarte {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 25px;
+  margin-bottom: 60px;
+  place-items: center; }
+  .galeria-miarte .contenedor-card {
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4); }
+    .galeria-miarte .contenedor-card img {
+      position: relative;
+      width: 250px;
+      height: 350px;
+      transition: all 400ms ease-out; }
+    .galeria-miarte .contenedor-card .scale:hover {
+      filter: brightness(1.15) saturate(1.1) drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+      transform: scale(1.2); }
+    .galeria-miarte .contenedor-card .capa {
+      position: absolute;
+      width: 250px;
+      height: 350px;
+      background: rgba(0, 0, 0, 0.763);
+      transition: all 1000ms ease-out;
+      opacity: 0;
+      bottom: 0; }
+      .galeria-miarte .contenedor-card .capa:hover {
+        opacity: 1; }
+      .galeria-miarte .contenedor-card .capa h3 {
+        font-size: 20px;
+        position: absolute;
+        color: #fff;
+        font-weight: 400;
+        margin-top: 120px;
+        margin-left: 60px; }
+
+.boton-galeria-miarte {
+  margin-bottom: 50px; }
 
 .dibujo-card {
   background-color: #82940c53;
-  padding: 20px 0px 100px 0px; }
+  padding: 20px 0px 100px 0px;
+  margin-top: 50px; }
   .dibujo-card h2 {
     text-align: center;
     margin-top: 50px;
@@ -134,6 +158,7 @@ header .menu-color {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: 0;
     background-color: #f1f1f1;
     border: 2px solid #82940c96;
     border-radius: 6px;
@@ -146,75 +171,146 @@ header .menu-color {
   .dibujo-card img {
     height: 200px;
     margin: 30px;
-    border-radius: 6px; }
+    border-radius: 6px;
+    margin-right: 15px; }
   .dibujo-card div {
+    text-align: left;
     width: 50%; }
     .dibujo-card div p {
       font-size: 17px;
       margin-bottom: 15px; }
   .dibujo-card .clases {
     flex-direction: row-reverse; }
-  .dibujo-card div {
+  .dibujo-card .clases-texto {
     text-align: right; }
 
-.pintura-intro {
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  margin-top: 40px; }
-
-.pintura-color {
+.presentacion {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: 0;
+  border-radius: 6px;
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  gap: 20px; }
+  .presentacion .presentacion-imagenes {
+    margin-top: 50px;
+    background-color: #82940c;
+    width: 40%;
+    margin: auto; }
+  .presentacion .presentacion-texto {
+    padding: 15px; }
+    .presentacion .presentacion-texto h2 {
+      font-size: 18px; }
+      .presentacion .presentacion-texto h2 .span-size {
+        font-size: 25px;
+        font-weight: 600; }
+      .presentacion .presentacion-texto h2 .span-color {
+        color: #ff7310;
+        font-weight: 600; }
+
+.pasiones {
+  background-color: #82940c53;
+  padding: 55px;
+  margin: auto;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 40px; }
+  .pasiones h3 {
+    width: 90%;
+    margin: auto;
+    font-size: 15px; }
+
+.aspectos {
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #81940C;
-  color: #ffffff;
-  margin-top: 60px;
-  padding: 60px 30px 100px 30px;
-  text-align: center; }
-  .pintura-color div img {
-    width: 100%; }
+  flex-direction: 0;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 60px; }
+  .aspectos img {
+    width: 45%;
+    padding: 15px; }
 
-.carrousel-dibujo div .carrusel-inner .carousel-item .imagen-carrusel {
-  filter: brightness(70%);
-  -webkit-filter: brightness(70%);
-  -moz-filter: brightness(70%); }
+.carrousel-dibujo div .carousel-inner .carousel-item img {
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  -moz-filter: brightness(60%); }
 
-.carrousel-dibujo div .carrusel-inner .carousel-item .texto-carrusel {
+.carrousel-dibujo div .carousel-inner .carousel-item div .texto-carrusel {
   color: #ffffff;
   font-weight: 600; }
 
-.dibujo-intro {
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  margin-top: 40px; }
-
-.galeria div .galeria-dibujo p {
-  margin-top: 15px; }
-
-.ilustracion-tecnologia {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #81940C;
+.pintura-color {
+  background-color: #82940c;
   color: #ffffff;
   margin-top: 60px;
   padding: 60px 30px 100px 30px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%; }
+  .pintura-color div img {
+    width: 100%; }
 
-.ilustracion-tecnologia p {
-  margin-top: 20px; }
+.titulo-cursos {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px; }
+
+.cursos {
+  border: 2px solid #82940c96;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 60px; }
+  .cursos .curso-cientifica {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: 0;
+    border-radius: 6px;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px; }
+    .cursos .curso-cientifica img {
+      width: 60%;
+      border-radius: 6px; }
+    .cursos .curso-cientifica div h3 {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 15px; }
+    .cursos .curso-cientifica div h4 {
+      font-size: 18px;
+      margin-bottom: 20px; }
+  .cursos .descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto; }
+    .cursos .descripcion p {
+      text-align: center;
+      font-size: 18px;
+      padding: 30px; }
+      .cursos .descripcion p span {
+        font-weight: 600; }
 
 .logo-contacto {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-bottom: 60px; }
   .logo-contacto h3 {
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 50px;
     margin-bottom: 30px; }
   .logo-contacto div img {
@@ -250,7 +346,7 @@ header .menu-color {
       flex-direction: column;
       margin-bottom: 10px;
       /*border: 1px solid rgb(172, 172, 172);*/
-      background-color: #82940c5a;
+      background-color: #82940c53;
       padding: 20px;
       border-radius: 6px; }
       .formulario-mapa .formulario .formulario-caja div {
@@ -267,8 +363,9 @@ header .menu-color {
           border: none; }
   .formulario-mapa .mapa {
     display: flex;
-    flex-direction: column;
+    justify-content: 0;
     align-items: center;
+    flex-direction: column;
     margin-bottom: 60px; }
     .formulario-mapa .mapa h3 {
       font-size: 20px;
@@ -302,6 +399,8 @@ footer {
       footer .footer-nav ul li a {
         text-decoration: none;
         color: #ffffff; }
+        footer .footer-nav ul li a:hover {
+          color: #82940c; }
   footer .footer-redes {
     color: white;
     text-align: center; }
@@ -324,11 +423,82 @@ footer {
       .first div h2 {
         font-size: 25px;
         margin-top: 0px;
-        margin-bottom: 15px; } }
+        margin-bottom: 15px; }
+  .presentacion .presentacion-texto h2 {
+    font-size: 15px; }
+  .pasiones {
+    width: 90%; }
+    .pasiones h3 {
+      font-size: 15px;
+      text-align: center; }
+  .cursos .curso-cientifica img {
+    width: 50%; }
+  .cursos .curso-cientifica div h3 {
+    font-size: 20px; }
+  .cursos .curso-cientifica div h4 {
+    font-size: 15px; } }
+
+@media screen and (max-width: 1120px) {
+  .galeria-miarte {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 980px) {
+  .presentacion {
+    width: 100%; }
+    .presentacion .presentacion-imagenes {
+      width: 60%; }
+  .cursos .curso-cientifica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .cursos .curso-cientifica img {
+      width: 100%; }
+    .cursos .curso-cientifica div {
+      text-align: center;
+      margin-top: 25px; }
+      .cursos .curso-cientifica div h3 {
+        font-size: 25px; }
+      .cursos .curso-cientifica div h4 {
+        font-size: 18px; } }
+
+.formulario-mapa .formulario h3 {
+  font-size: 20px; }
 
 @media screen and (max-width: 880px) {
   .formulario-mapa {
-    flex-direction: column; } }
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 60px; }
+    .formulario-mapa .formulario {
+      text-align: center; }
+  .presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .presentacion .presentacion-imagenes {
+      width: 100%; }
+    .presentacion .presentacion-texto h2 {
+      font-size: 15px;
+      text-align: center; }
+  .pasiones {
+    background-color: #82940c5a; }
+    .pasiones h3 {
+      font-size: 15px;
+      text-align: center; }
+  .aspectos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .aspectos img {
+      width: 100%; } }
+
+@media screen and (max-width: 820px) {
+  .galeria-miarte {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 812px) {
   .first {
@@ -338,7 +508,23 @@ footer {
     .first h2 {
       font-size: 20px;
       margin-top: 0;
-      margin-bottom: 25px; } }
+      margin-bottom: 25px; }
+  .cursos .curso-cientifica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .cursos .curso-cientifica img {
+      width: 100%; }
+    .cursos .curso-cientifica div {
+      text-align: center;
+      margin-top: 25px; }
+      .cursos .curso-cientifica div h3 {
+        font-size: 20px; }
+      .cursos .curso-cientifica div h4 {
+        font-size: 15px; }
+  .cursos .descripcion p {
+    font-size: 15px; } }
 
 @media screen and (max-width: 712px) {
   .first {
@@ -442,6 +628,23 @@ footer {
     grid-template-rows: 120px 150px 120px;
     grid-template-areas: "footer-logo" "footer-nav" "footer-redes"; } }
 
+.formulario-mapa {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 60px; }
+  .formulario-mapa .formulario {
+    text-align: center; }
+
+@media screen and (max-width: 580px) {
+  .galeria-miarte {
+    grid-template-columns: repeat(1, 1fr); }
+  .formulario-mapa {
+    width: 90%; }
+    .formulario-mapa .formulario {
+      width: 90%; }
+    .formulario-mapa .mapa {
+      width: 90%; } }
+
 @media screen and (max-width: 500px) {
   .first {
     background-repeat: no-repeat;
@@ -453,14 +656,9 @@ footer {
     .first h2 {
       display: none; }
     .first .negro {
-      display: none; } }
-
-/*.slide{
-        display: none;*/
-.dibujo-clases .clases {
-  height: 550px; }
-
-@media screen and (max-width: 500px) {
+      display: none; }
+  .dibujo-clases .clases {
+    height: 550px; }
   .dibujo-card .ilustracion img {
     width: 80%; }
   .dibujo-card .clases {

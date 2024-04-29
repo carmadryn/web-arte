@@ -14,13 +14,123 @@
             }
         }
     }
-}    
+    .presentacion{ 
+        .presentacion-texto{
+            h2{
+                font-size: 15px;
 
+            }
+        }
+
+    }
+    .pasiones{
+        width: 90%;
+        h3{
+            font-size: 15px;
+            text-align: center;
+        }
+    }
+    .cursos{
+        .curso-cientifica{
+            img{
+                width: 50%;
+            }
+            div{
+                h3{
+                    font-size: 20px;
+                }
+                h4{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1120px){
+    .galeria-miarte{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:980px){
+    .presentacion{
+        width: 100%;
+        .presentacion-imagenes{
+            width: 60%;
+        }
+    } 
+    .cursos{
+        .curso-cientifica{
+            @include flexbox (flex, center, center, column);
+            img{
+                width: 100%;
+            }
+            div{
+                text-align: center;
+                margin-top: 25px;
+                h3{
+                    font-size: 25px;
+                }
+                h4{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+.formulario-mapa{
+    .formulario{
+        h3{
+            font-size: 20px;
+        }
+    }
+}
 @media screen and (max-width:880px){
     .formulario-mapa{
         flex-direction: column;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 60px;
+        .formulario{
+            text-align: center;
+            
+        }
+    }    
+    
+    .presentacion{
+        @include flexbox (flex, center, center,column);
+        .presentacion-imagenes{
+            width: 100%;
+        }
+        .presentacion-texto{
+            h2{
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+    }    
+    .pasiones{
+        background-color: #82940c5a;
+        h3{
+            font-size: 15px;
+            text-align: center;
+        }
     }
+    .aspectos{
+        @include flexbox (flex, center, center,column);
+        
+        img{
+            width: 100%;
+        }
+    }
+
 }
+@media screen and (max-width:820px){
+    .galeria-miarte{
+        grid-template-columns: repeat(2,1fr);
+    }
+}    
+
+
 @media screen and (max-width:812px){
     .first{
         height: 75vh;
@@ -31,6 +141,29 @@
             font-size: 20px;
             margin-top: 0;
             margin-bottom: 25px;
+        }
+    }
+    .cursos{
+        .curso-cientifica{
+            @include flexbox (flex, center, center, column);
+            img{
+                width: 100%;
+            }
+            div{
+                text-align: center;
+                margin-top: 25px;
+                h3{
+                    font-size: 20px;
+                }
+                h4{
+                    font-size: 15px;
+                }
+            }
+        }
+        .descripcion{
+            p{
+                font-size: 15px;
+            }
         }
     }
 }
@@ -172,7 +305,31 @@
         ;
     }
 }  
+.formulario-mapa{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 60px;
+    .formulario{
+        text-align: center;
+        
+    }
+} 
 
+@media screen and (max-width:580px){
+    .galeria-miarte{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .formulario-mapa{
+        width: 90%;
+        .formulario{
+            width: 90%;
+        } 
+        .mapa{
+            width: 90%;
+        }
+    }
+}
 @media screen and (max-width:500px){
     .first{
         background-repeat: no-repeat;
@@ -189,18 +346,12 @@
             display:none
         }
     }   
-
-    }
-    /*.slide{
-        display: none;*/
-    
     .dibujo-clases{
         .clases{
             height: 550px;
         }
-}
+    }
 
-@media screen and (max-width:500px){
     .dibujo-card{
         .ilustracion{
             img{
@@ -220,4 +371,4 @@
             }
         }
     }
-}
+}    

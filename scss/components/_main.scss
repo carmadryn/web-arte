@@ -13,9 +13,8 @@
         h1{
             font-size: 50px;
             font-weight: 600;
-            color: #ffffff;
+            color: nth($colores, 4);
             margin: 0;
-
         }
         h2{
             font-size: 30px;
@@ -48,64 +47,84 @@
         }
     }
 }
-.galeria{
-    @include flexbox (flex, center, center, column);
-    margin-bottom: 100px;
-    h2{
-        text-align: center;
-        margin-bottom: 30px;
-        margin-top: 30px;
-        text-transform: uppercase;
-        font-size: 25px;
-    }
-    .galeria-card{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-        div{
-            border: 1px solid black;
-            width: 280px;
-            height: 450px;
-            border-radius: 6px;
-            text-align: center;
-            margin: 15px;
-            padding: 15px;
-            img{
-                width: 250px;
-                height: 300px;
-                border-radius: 6px;
-                margin-top: 5px;
-                box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
-                -webkit-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
-                -moz-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
+.pintura-intro{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.galeria-miarte{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 25px ;
+    margin-bottom: 60px;
+    place-items: center;
+    .contenedor-card{
+        width: 250px;
+        height: 350px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 6px;
+        position:relative;
+        box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
+        -moz-box-shadow: 7px 6px 9px -3px rgba(0,0,0,0.4);
+        img{
+            position:relative;
+            width: 250px;
+            height: 350px;
+            transition: all 400ms ease-out;
             }
-            h3{
-                font-size: 18px;
-                margin-top: 10px;
-            }
-            p{
-                font-size: 15px;
+        .scale{
+            &:hover{
+                filter: brightness(1.15) saturate(1.1)
+                drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+                transform: scale(1.2);
             }
         }
-        
-    }
+        .capa{
+            position: absolute;
+            width: 250px;
+            height: 350px;
+            background: rgba(0, 0, 0, 0.763);
+            transition: all 1000ms ease-out;
+            opacity: 0;
+            bottom: 0;
+            &:hover{
+                opacity: 1;
+            }
+            h3{
+                font-size: 20px;
+                position: absolute;
+                color: #fff;
+                font-weight: 400;
+                margin-top: 120px;
+                margin-left: 60px;
+            }
+        }
+    }            
+}
+.boton-galeria-miarte{
+    @extend %flex-center;
+    margin-bottom: 50px;
 }
 .dibujo-card{
-    background-color: #82940c53;
+    background-color: $color-primario-opacidad;
     padding: 20px 0px 100px 0px;
+    margin-top: 50px;
     h2{
         text-align: center;
         margin-top: 50px;
         font-size: 25px;
     }
     .ilustracion{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        @include flexbox (flex, space-evenly, center, 0);
         background-color: #f1f1f1;
-        border: 2px solid #82940c96;
+        border: 2px solid $color-bordes;
         border-radius: 6px;
         height: 300px;
         width: 90%;
@@ -118,106 +137,173 @@
             height: 200px;
             margin: 30px;
             border-radius: 6px;
+            margin-right: 15px;
         }
         div{
+            text-align: left;
             width: 50%;
             p{
                 font-size: 17px;
                 margin-bottom: 15px;
+                
             }
         }
     .clases{
         flex-direction: row-reverse;
         }
-        div{
+        .clases-texto{
             text-align: right;
             }
 }
 
 //////////////*PAGINAS*//////////
 /// ACERCA DE MI
-/// PINTURA
-.pintura-intro{
-    text-align: center;
-    width: 80%;
+.presentacion{
+    @include flexbox (flex, space-evenly, center,0); 
+    border-radius: 6px;
+    width: 90%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 30px;
+    padding: 20px;
+    gap: 20px;
+    .presentacion-imagenes{
+        margin-top: 50px;
+        background-color: $color-primario;
+        width: 40%;
+        margin: auto;
+        
+    }
+    .presentacion-texto{
+        padding: 15px;
+        h2{
+            font-size: 18px;
+            .span-size{
+                font-size: 25px;
+                font-weight: 600;
+            }
+            .span-color{
+                color: $color-acento;
+                font-weight: 600;
+            } 
+        }
+    }
 }
-
+.pasiones{
+    background-color: $color-primario-opacidad;
+    padding: 55px;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    h3{
+        width: 90%;
+        margin: auto;
+        font-size: 15px;
+    }
+}
+.aspectos{
+    @include flexbox (flex, center, center,0);
+    width: 90%;
+    margin: auto;
+    margin-bottom: 60px;
+    img{
+        width: 45%;
+        padding: 15px;
+    }
+}
+/// MI ARTE
+.carrousel-dibujo{
+    div{
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    filter: brightness(60%);
+                    -webkit-filter: brightness(60%);
+                    -moz-filter: brightness(60%);
+                    }
+                div{
+                    .texto-carrusel{
+                        color: #ffffff ;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
 .pintura-color{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #81940C;
+    background-color: $color-primario;
     color: #ffffff;
     margin-top: 60px;
     padding: 60px 30px 100px 30px;
     text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
     div{
         img{
             width: 100%;
         }
     }
 }
-
-/// DIBUJO
-.carrousel-dibujo{
-    div{
-        .carrusel-inner{
-            .carousel-item{
-                .imagen-carrusel{
-                    filter: brightness(70%);
-                    -webkit-filter: brightness(70%);
-                    -moz-filter: brightness(70%);
-                }
-                .texto-carrusel{
-                    color: #ffffff ;
-                    font-weight: 600;
-                }
-
+/// CURSOS
+.titulo-cursos{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+}
+.cursos{
+    border: 2px solid $color-bordes;
+    background-color: #f1f1f1;
+    border-radius: 6px;
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    .curso-cientifica{
+        @include flexbox (flex, space-evenly, center, 0);
+        border-radius: 6px;
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        padding: 15px;
+        img{
+            width: 60%;
+            border-radius: 6px;
+            
+        }
+        div{
+            h3{
+                font-size: 25px;
+                font-weight: 600;
+                margin-bottom: 15px
+            }
+            h4{
+                font-size: 18px;
+                margin-bottom: 20px;
             }
         }
-    }
-}
-.dibujo-intro{
-    text-align: center;
-    width: 80%;
-    margin: auto;
-    margin-top: 40px;
-}
-.galeria{
-    div{
-        .galeria-dibujo{
-            p{
-                margin-top: 15px;
+    }  
+    .descripcion{
+        @include flexbox (flex, center, center, column);
+        width: 90%;
+        margin: auto;
+        p{
+            text-align: center;
+            font-size: 18px;
+            padding: 30px;
+            span{
+                font-weight: 600;
             }
-        }   
-    }
-}   
-.ilustracion-tecnologia{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #81940C;
-    color: #ffffff;
-    margin-top: 60px;
-    padding: 60px 30px 100px 30px;
-    text-align: center;
-}
-.ilustracion-tecnologia p{
-margin-top: 20px;
-}
-
+        }
+    }  
+}    
 /// CONTACTO
 .logo-contacto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox (flex, center, center, column);
     margin-bottom: 60px;
         h3{
-            font-size: 20px;
+            font-size: 25px;
             margin-top: 50px;
             margin-bottom: 30px;
         }
@@ -273,7 +359,7 @@ margin-top: 20px;
             flex-direction: column;
             margin-bottom:10px;
             /*border: 1px solid rgb(172, 172, 172);*/
-            background-color: #82940c5a;
+            background-color: $color-primario-opacidad;
             padding: 20px;
             border-radius: 6px;
             div{
@@ -294,9 +380,7 @@ margin-top: 20px;
         }
     }
     .mapa{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexbox (flex, 0, center, column);
         margin-bottom: 60px;
         h3{
             font-size: 20px;

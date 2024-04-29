@@ -31,6 +31,9 @@ footer{
                 a{
                     text-decoration: none;
                     color: #ffffff;
+                    &:hover{
+                        color:$color-primario;
+                    }
                 }
             }
         }

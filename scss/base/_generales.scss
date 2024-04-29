@@ -10,27 +10,41 @@
 
 //!variables
 $color-primario:#82940c;
+$color-primario-opacidad:#82940c53;
 $color-secundario:#2e3403;
-$color-acento:rgb(211, 88, 0);
+$color-acento:rgb(255, 115, 16);
+$color-bordes: #82940c96;
+
+
+//!listas
+$colores:#82940c, #2e3403, rgb(255, 115, 16), white, black, gray;
 
 /*---------Botones--------*/
-
+//*FALTAN ANIMACIONES
 .boton{
     text-decoration: none;
     list-style: none;
     background-color: $color-primario;
     border-radius: 6px;
     color: #ffffff;
+    font-weight: 600;
     padding: 10px 20px 10px 20px;
     font-size: 14px;
+    transition: all 700ms ease-out;
+    
     &:hover{
         color: white;
         background-color: $color-secundario;
     }
 }
+$boton:(
+    bg-boton:black,
+
+);
 /*boton first*/
 .negro{
     background-color:black;
+    transition: all 700ms ease-out;
     &:hover{
         color:#000000;
         background-color: #ffffff;
@@ -50,3 +64,9 @@ $color-acento:rgb(211, 88, 0);
     flex-direction: $direction;
 }
 
+///*EXTEND*//// 
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
