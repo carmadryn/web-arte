@@ -1,3 +1,5 @@
+////*INDEX*////
+/// 
 .first{
     @include flexbox (flex, center, center, column);
     background-image: url(../img/gatoraton.jpg);
@@ -47,6 +49,8 @@
         }
     }
 }
+//*Galeria de fotos del index y Mi arte - GRID
+
 .pintura-intro{
     text-align: center;
     width: 80%;
@@ -79,6 +83,7 @@
             height: 350px;
             transition: all 400ms ease-out;
             }
+        //*filtro del index
         .scale{
             &:hover{
                 filter: brightness(1.15) saturate(1.1)
@@ -86,6 +91,7 @@
                 transform: scale(1.2);
             }
         }
+        //*filtro de page Mi Arte
         .capa{
             position: absolute;
             width: 250px;
@@ -112,6 +118,9 @@
     @extend %flex-center;
     margin-bottom: 50px;
 }
+
+//*Cards de Cursos*//
+
 .dibujo-card{
     background-color: $color-primario-opacidad;
     padding: 20px 0px 100px 0px;
@@ -156,8 +165,14 @@
             }
 }
 
-//////////////*PAGINAS*//////////
-/// ACERCA DE MI
+////////////////***********PAGINAS**********//////////
+/// 1.ACERCA DE MI
+/// 2.MI ARTE
+/// 3.CURSOS 
+/// 4.CONTACTO
+ 
+///**1.ACERCA DE MI
+
 .presentacion{
     @include flexbox (flex, space-evenly, center,0); 
     border-radius: 6px;
@@ -211,7 +226,8 @@
         padding: 15px;
     }
 }
-/// MI ARTE
+
+///**1.MI ARTE
 .carrousel-dibujo{
     div{
         .carousel-inner{
@@ -245,7 +261,7 @@
         }
     }
 }
-/// CURSOS
+///**3.CURSOS
 .titulo-cursos{
     text-align: center;
     margin-top: 50px;
@@ -298,7 +314,8 @@
         }
     }  
 }    
-/// CONTACTO
+
+///**4.CONTACTO
 .logo-contacto{
     @include flexbox (flex, center, center, column);
     margin-bottom: 60px;
@@ -358,24 +375,28 @@
             display: flex;
             flex-direction: column;
             margin-bottom:10px;
-            /*border: 1px solid rgb(172, 172, 172);*/
             background-color: $color-primario-opacidad;
             padding: 20px;
             border-radius: 6px;
             div{
                 margin-bottom: 15px;
+                label{
+                    display: block;
+                    padding-left: 15px;
+                    text-align: left;
+                }
                 input[type="text"],input[type="email"]{
                     width: calc(100% - 10px); /* Toma el ancho completo menos el margen derecho */
                     padding: 10px;
                     border: 1px solid #ccc;
-                    border-radius: 5px;
+                    border-radius: 6px;
                 }
                 .comentario{
                     height: 100px;
                 }
-                .boton{
-                    border:none;
-                }   
+                .boton-formulario{
+                    border: none;
+                }
             }
         }
     }

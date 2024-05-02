@@ -1,4 +1,5 @@
 @media screen and (max-width:1200px){
+//*index hero
     .first{
         height: 83vh;
         div{
@@ -14,14 +15,13 @@
             }
         }
     }
+//*Acerca de mi
     .presentacion{ 
         .presentacion-texto{
             h2{
                 font-size: 15px;
-
             }
         }
-
     }
     .pasiones{
         width: 90%;
@@ -30,6 +30,7 @@
             text-align: center;
         }
     }
+//*cursos
     .cursos{
         .curso-cientifica{
             img{
@@ -46,21 +47,28 @@
         }
     }
 }
+
+
 @media screen and (max-width:1120px){
+//*galerias    
     .galeria-miarte{
         grid-template-columns: repeat(3,1fr);
     }
 }
+
+
 @media screen and (max-width:980px){
+//*acerca de mi
     .presentacion{
         width: 100%;
         .presentacion-imagenes{
             width: 60%;
         }
     } 
+//*cursos    
     .cursos{
         .curso-cientifica{
-            @include flexbox (flex, center, center, column);
+            /*@include flexbox (flex, center, center, column);*/
             img{
                 width: 100%;
             }
@@ -77,6 +85,7 @@
         }
     }
 }
+//*contacto
 .formulario-mapa{
     .formulario{
         h3{
@@ -84,7 +93,10 @@
         }
     }
 }
+
+
 @media screen and (max-width:880px){
+//*contacto    
     .formulario-mapa{
         flex-direction: column;
         width: 70%;
@@ -95,7 +107,7 @@
             
         }
     }    
-    
+//*acerca de mi    
     .presentacion{
         @include flexbox (flex, center, center,column);
         .presentacion-imagenes{
@@ -117,14 +129,15 @@
     }
     .aspectos{
         @include flexbox (flex, center, center,column);
-        
         img{
             width: 100%;
         }
     }
-
 }
+
+
 @media screen and (max-width:820px){
+//*galeria    
     .galeria-miarte{
         grid-template-columns: repeat(2,1fr);
     }
@@ -132,6 +145,7 @@
 
 
 @media screen and (max-width:812px){
+//*index hero
     .first{
         height: 75vh;
         h1{
@@ -143,6 +157,7 @@
             margin-bottom: 25px;
         }
     }
+//*cursos    
     .cursos{
         .curso-cientifica{
             @include flexbox (flex, center, center, column);
@@ -169,6 +184,7 @@
 }
 
 @media screen and (max-width:712px){
+//*index hero
     .first{
         height: 60vh;
         background-position: 40% center;
@@ -193,6 +209,7 @@
             font-size: 20px;
         }
     }
+//*index card cursos
     .dibujo-card{
         text-align: center;
         margin-top: 30px;
@@ -224,6 +241,7 @@
 }  
 
 @media screen and (max-width:621px){
+//*index hero
     .first{
         height: 60vh;
         background-position: 30% center;
@@ -237,7 +255,8 @@
             margin-top: 15px;
             margin-bottom: 20px;
         }
-    }  
+    }
+//*index card cursos      
     .dibujo-card{
         text-align: center;
         margin-top: 20px;
@@ -304,33 +323,35 @@
         "footer-redes"
         ;
     }
-}  
-.formulario-mapa{
-    width: 80%;
-    margin: auto;
-    margin-bottom: 60px;
-    .formulario{
-        text-align: center;
-        
+    .formulario-mapa{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 60px;
+    /*.formulario{
+        text-align: center;*/
     }
 } 
 
 @media screen and (max-width:580px){
+//*galerias
     .galeria-miarte{
         grid-template-columns: repeat(1,1fr);
     }
-
+//*contacto
     .formulario-mapa{
-        width: 90%;
+        
         .formulario{
-            width: 90%;
+            width: 95%;
+            margin: auto;
         } 
         .mapa{
-            width: 90%;
+            width: 220px;
+            margin: auto;
         }
     }
 }
 @media screen and (max-width:500px){
+//*index hero   
     .first{
         background-repeat: no-repeat;
         background-position: 15% center;
@@ -370,5 +391,10 @@
                 }
             }
         }
+    }
+    
+//*mi arte Bootstrap
+    .carrousel-dibujo{
+        display: none;
     }
 }    

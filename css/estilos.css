@@ -345,21 +345,24 @@ header .menu-color {
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
-      /*border: 1px solid rgb(172, 172, 172);*/
       background-color: #82940c53;
       padding: 20px;
       border-radius: 6px; }
       .formulario-mapa .formulario .formulario-caja div {
         margin-bottom: 15px; }
+        .formulario-mapa .formulario .formulario-caja div label {
+          display: block;
+          padding-left: 15px;
+          text-align: left; }
         .formulario-mapa .formulario .formulario-caja div input[type="text"], .formulario-mapa .formulario .formulario-caja div input[type="email"] {
           width: calc(100% - 10px);
           /* Toma el ancho completo menos el margen derecho */
           padding: 10px;
           border: 1px solid #ccc;
-          border-radius: 5px; }
+          border-radius: 6px; }
         .formulario-mapa .formulario .formulario-caja div .comentario {
           height: 100px; }
-        .formulario-mapa .formulario .formulario-caja div .boton {
+        .formulario-mapa .formulario .formulario-caja div .boton-formulario {
           border: none; }
   .formulario-mapa .mapa {
     display: flex;
@@ -448,10 +451,7 @@ footer {
     .presentacion .presentacion-imagenes {
       width: 60%; }
   .cursos .curso-cientifica {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
+    /*@include flexbox (flex, center, center, column);*/ }
     .cursos .curso-cientifica img {
       width: 100%; }
     .cursos .curso-cientifica div {
@@ -626,24 +626,23 @@ footer {
   footer {
     grid-template-columns: 1fr;
     grid-template-rows: 120px 150px 120px;
-    grid-template-areas: "footer-logo" "footer-nav" "footer-redes"; } }
-
-.formulario-mapa {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 60px; }
-  .formulario-mapa .formulario {
-    text-align: center; }
+    grid-template-areas: "footer-logo" "footer-nav" "footer-redes"; }
+  .formulario-mapa {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 60px;
+    /*.formulario{
+        text-align: center;*/ } }
 
 @media screen and (max-width: 580px) {
   .galeria-miarte {
     grid-template-columns: repeat(1, 1fr); }
-  .formulario-mapa {
-    width: 90%; }
-    .formulario-mapa .formulario {
-      width: 90%; }
-    .formulario-mapa .mapa {
-      width: 90%; } }
+  .formulario-mapa .formulario {
+    width: 95%;
+    margin: auto; }
+  .formulario-mapa .mapa {
+    width: 220px;
+    margin: auto; } }
 
 @media screen and (max-width: 500px) {
   .first {
@@ -666,4 +665,6 @@ footer {
     .dibujo-card .clases img {
       width: 80%; }
     .dibujo-card .clases div .boton-dibujo {
-      margin-bottom: 10px; } }
+      margin-bottom: 10px; }
+  .carrousel-dibujo {
+    display: none; } }
