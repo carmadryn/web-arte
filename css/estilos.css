@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(animate.css);
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +38,10 @@
   justify-content: center;
   align-items: center; }
 
+.scale:hover {
+  filter: brightness(1.15) saturate(1.1) drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+  transform: scale(1.2); }
+
 header .menu-color {
   background-color: #ffe8bf; }
   header .menu-color div a img {
@@ -53,6 +58,8 @@ header .menu-color {
   background-attachment: fixed;
   height: 85vh;
   color: white; }
+  .first:hover {
+    filter: brightness(1.15) saturate(1.1) drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2)); }
   .first div {
     align-items: center;
     text-align: center;
@@ -116,32 +123,15 @@ header .menu-color {
     position: relative;
     box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4); }
+    -moz-box-shadow: 7px 6px 9px -3px rgba(0, 0, 0, 0.4);
+    /*.scale{
+        //*filtro de page Mi Arte en Mi arte main
+        /*.capa{*/ }
     .galeria-miarte .contenedor-card img {
       position: relative;
       width: 250px;
       height: 350px;
       transition: all 400ms ease-out; }
-    .galeria-miarte .contenedor-card .scale:hover {
-      filter: brightness(1.15) saturate(1.1) drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
-      transform: scale(1.2); }
-    .galeria-miarte .contenedor-card .capa {
-      position: absolute;
-      width: 250px;
-      height: 350px;
-      background: rgba(0, 0, 0, 0.763);
-      transition: all 1000ms ease-out;
-      opacity: 0;
-      bottom: 0; }
-      .galeria-miarte .contenedor-card .capa:hover {
-        opacity: 1; }
-      .galeria-miarte .contenedor-card .capa h3 {
-        font-size: 20px;
-        position: absolute;
-        color: #fff;
-        font-weight: 400;
-        margin-top: 120px;
-        margin-left: 60px; }
 
 .boton-galeria-miarte {
   margin-bottom: 50px; }
@@ -244,6 +234,23 @@ header .menu-color {
   color: #ffffff;
   font-weight: 600; }
 
+.galeria-miarte .contenedor-card .capa {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  background: rgba(0, 0, 0, 0.763);
+  transition: all 1000ms ease-out;
+  opacity: 0;
+  bottom: 0; }
+  .galeria-miarte .contenedor-card .capa:hover {
+    opacity: 1; }
+  .galeria-miarte .contenedor-card .capa h3 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 150px; }
+
 .pintura-color {
   background-color: #82940c;
   color: #ffffff;
@@ -252,8 +259,10 @@ header .menu-color {
   text-align: center;
   margin-bottom: 50px;
   width: 100%; }
-  .pintura-color div img {
-    width: 100%; }
+  .pintura-color div {
+    overflow: hidden; }
+    .pintura-color div img {
+      width: 100%; }
 
 .titulo-cursos {
   text-align: center;
@@ -628,8 +637,8 @@ footer {
     grid-template-rows: 120px 150px 120px;
     grid-template-areas: "footer-logo" "footer-nav" "footer-redes"; }
   .formulario-mapa {
-    width: 80%;
-    margin: auto;
+    /*width: 80%;
+        margin: auto;*/
     margin-bottom: 60px;
     /*.formulario{
         text-align: center;*/ } }
@@ -640,9 +649,8 @@ footer {
   .formulario-mapa .formulario {
     width: 95%;
     margin: auto; }
-  .formulario-mapa .mapa {
-    width: 220px;
-    margin: auto; } }
+  .formulario-mapa .mapa iframe {
+    width: auto; } }
 
 @media screen and (max-width: 500px) {
   .first {

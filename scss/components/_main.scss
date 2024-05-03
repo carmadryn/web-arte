@@ -7,6 +7,10 @@
     background-attachment: fixed;
     height: 85vh;
     color:rgb(255, 255, 255);
+    &:hover{
+    filter: brightness(1.15) saturate(1.1)
+    drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+    }
     div{
         align-items: center;
         text-align: center;
@@ -83,35 +87,11 @@
             height: 350px;
             transition: all 400ms ease-out;
             }
-        //*filtro del index
-        .scale{
-            &:hover{
-                filter: brightness(1.15) saturate(1.1)
-                drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
-                transform: scale(1.2);
-            }
-        }
-        //*filtro de page Mi Arte
-        .capa{
-            position: absolute;
-            width: 250px;
-            height: 350px;
-            background: rgba(0, 0, 0, 0.763);
-            transition: all 1000ms ease-out;
-            opacity: 0;
-            bottom: 0;
-            &:hover{
-                opacity: 1;
-            }
-            h3{
-                font-size: 20px;
-                position: absolute;
-                color: #fff;
-                font-weight: 400;
-                margin-top: 120px;
-                margin-left: 60px;
-            }
-        }
+        //*Fil del index en generales
+        /*.scale{
+        //*filtro de page Mi Arte en Mi arte main
+        /*.capa{*/
+
     }            
 }
 .boton-galeria-miarte{
@@ -228,6 +208,7 @@
 }
 
 ///**1.MI ARTE
+
 .carrousel-dibujo{
     div{
         .carousel-inner{
@@ -247,6 +228,31 @@
         }
     }
 }
+/// galeria compartida con index, filtro opacidad)
+.galeria-miarte{
+    .contenedor-card{
+        .capa{
+            position: absolute;
+            width: 250px;
+            height: 350px;
+            background: rgba(0, 0, 0, 0.763);
+            transition: all 1000ms ease-out;
+            opacity: 0;
+            bottom: 0;
+            &:hover{
+                opacity: 1;
+            }
+            h3{
+                font-size: 20px;
+                color: #fff;
+                font-weight: 400;
+                text-align: center;
+                margin-top: 150px;
+            }
+        }
+    }            
+}
+
 .pintura-color{
     background-color: $color-primario;
     color: #ffffff;
@@ -255,10 +261,11 @@
     text-align: center;
     margin-bottom: 50px;
     width: 100%;
-    div{
+    div{ 
+        overflow: hidden;
         img{
             width: 100%;
-        }
+        }    
     }
 }
 ///**3.CURSOS
@@ -408,6 +415,7 @@
             margin-bottom: 15px;
         }
         iframe{
+            
             border-radius: 6px;
         }
     }

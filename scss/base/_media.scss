@@ -324,8 +324,8 @@
         ;
     }
     .formulario-mapa{
-        width: 80%;
-        margin: auto;
+        /*width: 80%;
+        margin: auto;*/
         margin-bottom: 60px;
     /*.formulario{
         text-align: center;*/
@@ -345,8 +345,9 @@
             margin: auto;
         } 
         .mapa{
-            width: 220px;
-            margin: auto;
+            iframe{
+                width: auto;
+            }
         }
     }
 }
@@ -392,8 +393,8 @@
             }
         }
     }
-    
-//*mi arte Bootstrap
+
+//*mi arte carrousel Bootstrap
     .carrousel-dibujo{
         display: none;
     }
