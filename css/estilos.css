@@ -57,7 +57,8 @@ header .menu-color {
   background-size: cover;
   background-attachment: fixed;
   height: 85vh;
-  color: white; }
+  color: white;
+  transition: all 400ms ease-out; }
   .first:hover {
     filter: brightness(1.15) saturate(1.1) drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2)); }
   .first div {
@@ -189,7 +190,9 @@ header .menu-color {
     margin-top: 50px;
     background-color: #82940c;
     width: 40%;
-    margin: auto; }
+    margin: auto;
+    transition: all 400ms ease-out;
+    /*filtro.scale en generales*/ }
   .presentacion .presentacion-texto {
     padding: 15px; }
     .presentacion .presentacion-texto h2 {
@@ -262,6 +265,8 @@ header .menu-color {
   .pintura-color div {
     overflow: hidden; }
     .pintura-color div img {
+      /*filtro scale*/
+      transition: all 400ms ease-out;
       width: 100%; }
 
 .titulo-cursos {
@@ -637,20 +642,17 @@ footer {
     grid-template-rows: 120px 150px 120px;
     grid-template-areas: "footer-logo" "footer-nav" "footer-redes"; }
   .formulario-mapa {
-    /*width: 80%;
-        margin: auto;*/
-    margin-bottom: 60px;
-    /*.formulario{
-        text-align: center;*/ } }
+    margin-bottom: 60px; } }
 
 @media screen and (max-width: 580px) {
   .galeria-miarte {
     grid-template-columns: repeat(1, 1fr); }
-  .formulario-mapa .formulario {
-    width: 95%;
-    margin: auto; }
-  .formulario-mapa .mapa iframe {
-    width: auto; } }
+  .formulario-mapa {
+    width: 100%; }
+    .formulario-mapa .formulario {
+      margin: auto; }
+    .formulario-mapa .mapa iframe {
+      width: auto; } }
 
 @media screen and (max-width: 500px) {
   .first {

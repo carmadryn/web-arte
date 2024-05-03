@@ -7,6 +7,7 @@
     background-attachment: fixed;
     height: 85vh;
     color:rgb(255, 255, 255);
+    transition: all 400ms ease-out;
     &:hover{
     filter: brightness(1.15) saturate(1.1)
     drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
@@ -166,6 +167,8 @@
         background-color: $color-primario;
         width: 40%;
         margin: auto;
+        transition: all 400ms ease-out;
+        /*filtro.scale en generales*/
         
     }
     .presentacion-texto{
@@ -264,6 +267,8 @@
     div{ 
         overflow: hidden;
         img{
+            /*filtro scale*/
+            transition: all 400ms ease-out;
             width: 100%;
         }    
     }
